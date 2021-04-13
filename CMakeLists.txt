@@ -44,7 +44,7 @@ endif (CMAKE_COMPILER_IS_GNUCXX)
 if (CMAKE_BUILD_TYPE STREQUAL "Debug")
   add_definitions(-D__RTMIDI_DEBUG__)
   if (CMAKE_COMPILER_IS_GNUCXX)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wno-error=sign-compare")
   endif (CMAKE_COMPILER_IS_GNUCXX)
 endif ()
 
